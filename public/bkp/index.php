@@ -2,12 +2,6 @@
 <section class="hero">
     <?php include 'header.php'; ?>
     <div class="container hero-content">
-        <div class=" logoAnaeletroMobile">
-            <img src="./img/logo-anaeletro.webp" alt="AnaEletro Hero">
-        </div>
-        <div class="hero-mobile-img">
-            <img src="./img/hero-mobile-anaeletro.png" alt="AnaEletro Hero">
-        </div>
         <div class="hero-text">
             <h1>Tecnologia que acompanha o seu ritmo.</h1>
             <p>
@@ -66,12 +60,12 @@
 
             <?php
 $categorias = [
-    ["Smartphones", "Potência e câmeras de última geração para quem não para.", "img/smartphone-anaeletro.jpg"],
-    ["Notebooks", "Performance de desktop com a mobilidade que sua rotina exige.", "img/notebook-anaeletro.jpg"],
-    ["Caixas de Som", "Experiência sonora imersiva com graves profundos e design premium.", "img/caixa-de-som-anaeletro.jpg"],
-    ["Smart TVs", "O cinema na sua sala com cores vibrantes e inteligência artificial.", "img/tv-smart-anaeletro.jpg"],
-    ["Tablets", "Criatividade e produtividade sem limites na palma da sua mão.", "img/tablet-anaeletro.jpg"],
-    ["Consoles & Games", "Desempenho extremo para os jogadores mais exigentes do mercado.", "img/consoles-games-anaeletro.jpg"],
+    ["Smartphones", "Potência e câmeras de última geração para quem não para.", "img/smartphone-premium.webp"],
+    ["Notebooks", "Performance de desktop com a mobilidade que sua rotina exige.", "img/notebook-produtividade.webp"],
+    ["Caixas de Som", "Experiência sonora imersiva com graves profundos e design premium.", "img/caixa-som-audio.webp"],
+    ["Smart TVs", "O cinema na sua sala com cores vibrantes e inteligência artificial.", "img/smart-tv-4k.webp"],
+    ["Tablets", "Criatividade e produtividade sem limites na palma da sua mão.", "img/tablet-criativo.webp"],
+    ["Consoles & Games", "Desempenho extremo para os jogadores mais exigentes do mercado.", "img/games-console.webp"],
 ];
 
 foreach ($categorias as $categoria) {
@@ -83,7 +77,7 @@ foreach ($categorias as $categoria) {
         <div class='card-content'>
             <h3>{$categoria[0]}</h3>
             <p>{$categoria[1]}</p>
-            <a href='http://wa.me/5511993808453' class='btn-secundario'>Saiba Mais</a>
+            <a href='#comprar' class='btn-secundario'>Explorar</a>
         </div>
     </div>
     ";
@@ -93,22 +87,7 @@ foreach ($categorias as $categoria) {
         </div>
 
     </div>
-    <section class="scb-info">
-    <div class="container">
-        <div class="scb-card">
-            <div class="scb-icon">
-                <i data-lucide="shield-check"></i>
-            </div>
-            <div class="scb-text">
-                <p>É cliente <strong>SCB Crédito</strong>? Você pode financiar sua compra diretamente com eles e aproveitar condições exclusivas de parcelamento.</p>
-            </div>
-            <a href="https://www.scbcredito.com.br/" target="_blank" class="btn-scb-link">Saber mais <i data-lucide="chevron-right"></i></a>
-        </div>
-    </div>
 </section>
-
-
-
 
 <!-- FAQ -->
 <section id="faq" class="faq">
@@ -133,7 +112,6 @@ foreach ($categorias as $categoria) {
             <button class="faq-question">Como funciona o Financiamento SCB Crédito?</button>
             <div class="faq-answer">
                 <p>Exclusivo para clientes SCB. O sistema utiliza seu limite pré-aprovado, permitindo parcelamentos que não ocupam o limite do seu cartão de crédito.</p>
-                <a href="https://www.scbcredito.com.br/"> <img class="logoScbFAQ"  src="./img/logo-scb-credito.webp" alt="Logo SCB Crédito"> </a>
             </div>
         </div>
 
@@ -161,7 +139,9 @@ foreach ($categorias as $categoria) {
             Descubra produtos selecionados, condições facilitadas e atendimento especializado 
             para você fazer a escolha certa com segurança e confiança.
         </p>
-        <a href="http://wa.me/5511993808453" class="btn-principal">Quero falar com um especialista</a>
+        <a href="#contato" class="btn-principal">Quero falar com um especialista</a>
     </div>
 </section>
+
+
 <?php include 'footer.php'; ?>
