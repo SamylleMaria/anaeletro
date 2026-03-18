@@ -5,7 +5,7 @@
 ?>
 
 <header class="headerPrivacidade">
-    <?php include __DIR__ . '/../src/includes/header.php'; ?>
+    <?php include __DIR__ . '/src/includes/header.php'; ?>
 </header>
 
 <main class="politica-container">
@@ -90,4 +90,4 @@
     </section>
 </main>
 
-<?php include __DIR__ . '/../src/includes/footer.php'; ?>
+<?php include __DIR__ . '/src/includes/footer.php'; ?>
