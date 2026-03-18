@@ -1,15 +1,15 @@
 <?php
     $pageTitle = "AnaEletro | Equipamentos para sua casa e seu negócio";
     $pageDescription = "Catálogo de equipamentos domésticos e comerciais com soluções práticas, eficientes e confiáveis.";
-    include __DIR__ . '/../src/includes/header.php';
-    $categorias = require __DIR__. '/../src/data/categorias.php';
+    include __DIR__ . '/src/includes/header.php';
+    $categorias = require __DIR__. '/src/data/categorias.php';
 ?>
 
 <!-- HERO -->
 <section class="hero">
     <div class="container hero-content">
         <div class="hero-mobile-img">
-            <img src="./img/hero-mobile-anaeletro.png" alt="AnaEletro Hero">
+            <img src="./img/hero-mobile-anaeletro.jpg" alt="AnaEletro Hero">
         </div>
         <div class="hero-text">
             <h1>Tecnologia que acompanha o seu ritmo.</h1>
@@ -139,7 +139,7 @@
 
 
         <?php foreach ($categorias as [$nome, $descricao, $img]): ?>
-            <?php include __DIR__ . '/../src/templates/card-categoria.php'; ?>
+            <?php include __DIR__ . '/src/templates/card-categoria.php'; ?>
         <?php endforeach; ?>
 
         </div>
@@ -185,7 +185,7 @@
             <button class="faq-question">Como funciona o Financiamento SCB Crédito?</button>
             <div class="faq-answer">
                 <p>A compra parcelada é exclusiva para comerciantes que são clientes da SCB Crédito. O sistema utiliza seu limite pré-aprovado, permitindo parcelamentos que não ocupam o limite do seu cartão de crédito.</p>
-                <a href="https://www.scbcredito.com.br/"> <img class="logoScbFAQ"  src="./img/logo-scb-credito.webp" alt="Logo SCB Crédito"> </a>
+                <a href="https://www.scbcredito.com.br/"> <img class="logoScbFAQ"  src="./img/logo-scb-credito.png"  width="253" height="67" alt="Logo SCB Crédito"> </a>
             </div>
         </div>
 
@@ -233,4 +233,4 @@
     </div>
 </section>
 
-<?php include __DIR__ . '/../src/includes/footer.php'; ?>
+<?php include __DIR__ . '/src/includes/footer.php'; ?>

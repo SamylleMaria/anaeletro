@@ -86,6 +86,7 @@ h3 {
 
 .logo {
     width: 150px;
+    height: auto;
 }
 
 .logo span {
@@ -524,6 +525,7 @@ nav a:hover {
 
 .logo-footer {
     width: 140px;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -699,15 +701,21 @@ nav a:hover {
 }
 
 @media (max-width: 900px) {
-    .cta-content { flex-direction: column; text-align: center; }
-    .cta-buttons { justify-content: center; flex-direction: column; }
-    .cta-illustration { order: -1; }
+    .cta-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-buttons {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .cta-illustration {
+        order: -1;
+    }
     .cta-container {
-    padding: 30px 30px;
-    border-radius: 20px;
-
-
-}
+        padding: 30px 30px;
+        border-radius: 20px;
+    }
 }
 
 /* BOTÃO PRINCIPAL */
@@ -914,10 +922,12 @@ nav a:hover {
 
 .logoScb {
     width: 100px;
+    height: auto;
 
 }
 .logoScbFAQ {
     width: 120px;
+    height: auto;
     text-decoration: none;
     margin-bottom: 40px;
 }
@@ -940,7 +950,7 @@ nav a:hover {
         display: block; 
         width: 100%;
         max-width: 500px;
-        margin-top: -50px;
+/*         margin-top: -50px; */
         margin-bottom: -40px;
 
     }

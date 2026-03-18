@@ -1,9 +1,9 @@
 <?php
-    require_once __DIR__ . '/../src/functions/helpers.php';
+    require_once __DIR__ . '/src/functions/helpers.php';
     $pageTitle = "Produtos | AnaEletro";
     $pageDescription = "Explore o catálogo completo de equipamentos para casa e empresa.";
-    $categorias = require __DIR__ . '/../src/data/categoria-produtos.php';
-    require_once __DIR__ . '/../src/includes/header.php';
+    $categorias = require __DIR__ . '/src/data/categoria-produtos.php';
+    require_once __DIR__ . '/src/includes/header.php';
 ?>
 
 <link rel="stylesheet" href="/css/produtos.css">
@@ -30,7 +30,7 @@
 
                 <div class="grid-produtos">
                     <?php foreach ($produtos as $produto): ?>
-                        <?php include __DIR__ . '/../src/templates/card-produto.php'; ?>
+                        <?php include __DIR__ . '/src/templates/card-produto.php'; ?>
                     <?php endforeach; ?>
                 </div>
 
@@ -65,7 +65,7 @@
     </div>
 </section>
 
-<?php include __DIR__ . '/../src/includes/footer.php'; ?>
+<?php include __DIR__ . '/src/includes/footer.php'; ?>
 <script>lucide.createIcons();</script>
 </body>
 </html>
