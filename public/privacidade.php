@@ -1,7 +1,13 @@
+<?php
+    $pageTitle = "Privacidade | AnaEletro";
+    $pageDescription = "Política de privacidade e proteção de dados da AnaEletro.";
+
+?>
 
 <header class="headerPrivacidade">
-    <?php include 'header.php'; ?>
+    <?php include __DIR__ . '/../src/includes/header.php'; ?>
 </header>
+
 <main class="politica-container">
     <section class="politica-content">
         <h1>Política de Privacidade | Termos de Uso WhatsApp</h1>
@@ -84,4 +90,4 @@
     </section>
 </main>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/../src/includes/footer.php'; ?>

@@ -1,10 +1,13 @@
+<?php
+    $pageTitle = "AnaEletro | Equipamentos para sua casa e seu negócio";
+    $pageDescription = "Catálogo de equipamentos domésticos e comerciais com soluções práticas, eficientes e confiáveis.";
+    include __DIR__ . '/../src/includes/header.php';
+    $categorias = require __DIR__. '/../src/data/categorias.php';
+?>
+
 <!-- HERO -->
 <section class="hero">
-    <?php include 'header.php'; ?>
     <div class="container hero-content">
-        <div class=" logoAnaeletroMobile">
-            <img src="./img/logo-anaeletro.webp" alt="AnaEletro Hero">
-        </div>
         <div class="hero-mobile-img">
             <img src="./img/hero-mobile-anaeletro.png" alt="AnaEletro Hero">
         </div>
@@ -47,53 +50,105 @@
         </div>
     </div>
 </section>
+<!--VITRINE-->
+<section class="vitrine">
+    <div class="container">
 
+        <div class="vitrine-header">
+            <h2>Conheça nossas categorias</h2>
+            <p>Tecnologia e equipamentos para casa e negócio.</p>
+        </div>
 
-<!-- CATEGORIAS -->
+        <div class="carousel">
+            <div class="carousel-track">
+
+                <div class="carousel-item">
+                    <img src="img/produtos/air-fryer-anaeletro.jpg">
+                    <h3>Air Fryer</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/micro-ondas-anaeletro.jpg">
+                    <h3>Micro-ondas</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/liquidificadores-anaeletro.jpg">
+                    <h3>Liquidificadores</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/ventiladores-anaeletro.jpg">
+                    <h3>Ventiladores</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/ar-condicionado-portatil-anaeletro.jpg">
+                    <h3>Ar-condicionado Portátil</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/freezers-horizontais-anaeletro.jpg">
+                    <h3>Freezers Horizontais</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/fogoes-anaeletro.jpg">
+                    <h3>Fogões</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/smartphones-anaeletro.jpg">
+                    <h3>Smartphones</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/notebooks-anaeletro.jpg">
+                    <h3>Notebooks</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/produtos/smart-tvs-anaeletro.jpg">
+                    <h3>Smart TVs</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="div-btn-vitrine">
+            <a class="btn-vitrine" href="/produtos.php">Ver catálogo</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRODUTOS -->
 <section id="categorias" class="categorias">
     <div class="container">
         <div class="solucoes">
             <div class="secao-header">
-                <h2>Soluções em Tecnologia</h2>
-                <p>Linhas selecionadas para diferentes perfis, com orientação especializada e condições facilitadas.</p>
-                
+                <h2>Equipamentos para Casa e Entretenimento</h2>
+                <p>Tecnologia, conforto e praticidade com produtos selecionados para o seu dia a dia.</p>
             </div>
 
-<div class="section-divider"></div>
+            <div class="section-divider"></div>
         </div>
 
         <div class="grid-categorias">
 
-            <?php
-$categorias = [
-    ["Smartphones", "Potência e câmeras de última geração para quem não para.", "img/smartphone-anaeletro.jpg"],
-    ["Notebooks", "Performance de desktop com a mobilidade que sua rotina exige.", "img/notebook-anaeletro.jpg"],
-    ["Caixas de Som", "Experiência sonora imersiva com graves profundos e design premium.", "img/caixa-de-som-anaeletro.jpg"],
-    ["Smart TVs", "O cinema na sua sala com cores vibrantes e inteligência artificial.", "img/tv-smart-anaeletro.jpg"],
-    ["Tablets", "Criatividade e produtividade sem limites na palma da sua mão.", "img/tablet-anaeletro.jpg"],
-    ["Consoles & Games", "Desempenho extremo para os jogadores mais exigentes do mercado.", "img/consoles-games-anaeletro.jpg"],
-];
 
-foreach ($categorias as $categoria) {
-    echo "
-    <div class='card-categoria'>
-        <div class='card-img'>
-            <img src='{$categoria[2]}' alt='{$categoria[0]}'>
-        </div>
-        <div class='card-content'>
-            <h3>{$categoria[0]}</h3>
-            <p>{$categoria[1]}</p>
-            <a href='http://wa.me/5511993808453' class='btn-secundario'>Saiba Mais</a>
-        </div>
-    </div>
-    ";
-}
-?>
+
+        <?php foreach ($categorias as [$nome, $descricao, $img]): ?>
+            <?php include __DIR__ . '/../src/templates/card-categoria.php'; ?>
+        <?php endforeach; ?>
 
         </div>
 
     </div>
-    <section class="scb-info">
+</section>
+
+<!-- DIRECIONAMENTO SCB -->
+<section class="scb-info">
     <div class="container">
         <div class="scb-card">
             <div class="scb-icon">
@@ -102,13 +157,10 @@ foreach ($categorias as $categoria) {
             <div class="scb-text">
                 <p>É cliente <strong>SCB Crédito</strong>? Você pode financiar sua compra diretamente com eles e aproveitar condições exclusivas de parcelamento.</p>
             </div>
-            <a href="https://www.scbcredito.com.br/" target="_blank" class="btn-scb-link">Saber mais <i data-lucide="chevron-right"></i></a>
+            <a href="https://www.scbcredito.com.br/" target="_blank" class="btn-scb-link">Saber mais<i data-lucide="chevron-right"></i></a>
         </div>
     </div>
 </section>
-
-
-
 
 <!-- FAQ -->
 <section id="faq" class="faq">
@@ -132,8 +184,15 @@ foreach ($categorias as $categoria) {
         <div class="faq-item">
             <button class="faq-question">Como funciona o Financiamento SCB Crédito?</button>
             <div class="faq-answer">
-                <p>Exclusivo para clientes SCB. O sistema utiliza seu limite pré-aprovado, permitindo parcelamentos que não ocupam o limite do seu cartão de crédito.</p>
+                <p>A compra parcelada é exclusiva para comerciantes que são clientes da SCB Crédito. O sistema utiliza seu limite pré-aprovado, permitindo parcelamentos que não ocupam o limite do seu cartão de crédito.</p>
                 <a href="https://www.scbcredito.com.br/"> <img class="logoScbFAQ"  src="./img/logo-scb-credito.webp" alt="Logo SCB Crédito"> </a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Não sou cliente da SCB Crédito. Posso comprar?</button>
+            <div class="faq-answer">
+                <p>Sim. Caso não seja cliente SCB Crédito, a compra poderá ser realizada via Mercado Pago.</p>
             </div>
         </div>
 
@@ -151,9 +210,18 @@ foreach ($categorias as $categoria) {
             </div>
         </div>
 
+        
+        <div class="faq-item">
+            <button class="faq-question">Como faço para comprar?</button>
+            <div class="faq-answer">
+                <p>As compras são realizadas diretamente pelo WhatsApp.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-final">
     <div class="cta-container">
         <h2>Pronto para elevar sua experiência em tecnologia?</h2>
@@ -164,4 +232,5 @@ foreach ($categorias as $categoria) {
         <a href="http://wa.me/5511993808453" class="btn-principal">Quero falar com um especialista</a>
     </div>
 </section>
-<?php include 'footer.php'; ?>
+
+<?php include __DIR__ . '/../src/includes/footer.php'; ?>
